@@ -1,0 +1,37 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<style>
+.hero.is-dark.is-bold {
+    background-image: -webkit-linear-gradient(309deg, #006694 0%, #124a63 65%, #052f42 100%);
+    background-image: linear-gradient(141deg, #006694 0%, #124a63 65%, #052f42 100%);
+}
+</style>	
+	
+<body>
+  <section class="hero is-fullheight is-dark is-bold">
+
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered has-text-centered">
+                  <div id="app" class="column is-4 is-offset-4">
+                     <h1 class="title">
+                        Type Something
+                    </h1>
+                    <div class="card-content">
+                    <input type="text" class="input" v-model="updateMe" /> {{ updateMe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+</body>
+
+<script 
+new Vue({
+    el:"#app",
+    data: {
+       updateMe: ''
+    },
+});
